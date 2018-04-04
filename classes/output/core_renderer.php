@@ -28,6 +28,8 @@ namespace theme_ned_clean\output;
 
 defined('MOODLE_INTERNAL') || die;
 
+use moodle_url;
+
 class core_renderer extends \theme_clean_core_renderer {
     /**
      * Returns standard navigation between activities in a course.

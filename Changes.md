@@ -1,5 +1,8 @@
 Version Information
 ===================
+Version 3.3.0.1.2
+  1. M3.4 fix for activity and resource settings - https://www.screencast.com/t/IRIOYdh1a67p.
+
 Version 3.3.0.1.1
   1. Activity and resource settings - https://www.screencast.com/t/IRIOYdh1a67p.
 
