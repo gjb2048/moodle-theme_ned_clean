@@ -30,3 +30,10 @@ $string['configtitle'] = 'NED Clean';
 $string['pluginname'] = 'NED Clean';
 $string['region-side-pre'] = 'Pre';
 $string['region-side-post'] = 'Post';
+
+// Settings.
+$string['activitiesandresources'] = 'Activities & Resources';
+$string['forwardbacklinks'] = 'Forward/back links';
+$string['jumptomenu'] = '\'Jump to...\' menu';
+$string['questionnaireactivitylink'] = 'Questionnaire activity - link directly to Questions page';
+$string['urlresourcelink'] = 'URL Resource - link directly to URL';
