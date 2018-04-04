@@ -24,11 +24,19 @@
  *                           {@link http://moodle.org/user/profile.php?id=442195}
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-$THEME->name = 'ned_clean';
-
-$THEME->parents = array('clean', 'bootstrapbase');
-
-$THEME->rendererfactory = 'theme_overridden_renderer_factory';
-$THEME->csspostprocess = 'theme_ned_clean_process_css';
+/**
+ * Parses CSS before it is cached.
+ *
+ * This function can make alterations and replace patterns within the CSS.
+ *
+ * @param string $css The CSS
+ * @param theme_config $theme The theme config object.
+ * @return string The parsed CSS The parsed CSS.
+ */
+function theme_ned_clean_process_css($css, $theme) {
+    static $cleanparent = null;
+    if ($cleanparent === null) {
+        $cleanparent = theme_config::load('clean');
+    }
+    return theme_clean_process_css($css, $cleanparent);
+}
