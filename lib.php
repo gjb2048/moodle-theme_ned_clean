@@ -38,5 +38,21 @@ function theme_ned_clean_process_css($css, $theme) {
     if ($cleanparent === null) {
         $cleanparent = theme_config::load('clean');
     }
-    return theme_clean_process_css($css, $cleanparent);
+    $css .= theme_clean_process_css($css, $cleanparent);
+
+    $css .= theme_ned_clean_set_page_module_date($theme);
+
+    return $css;
+}
+
+function theme_ned_clean_set_page_module_date($theme) {
+    $css = '';
+
+    if ((!empty($theme->settings->pagedateshowhide)) && ($theme->settings->pagedateshowhide == 1)) {
+        $css .= '.path-mod-page #region-main > div > .modified {';
+        $css .= 'display: none;';
+        $css .= '}';
+    }
+
+    return $css;
 }
