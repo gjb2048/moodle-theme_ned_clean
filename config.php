@@ -29,6 +29,7 @@ defined('MOODLE_INTERNAL') || die();
 $THEME->name = 'ned_clean';
 
 $THEME->parents = array('clean', 'bootstrapbase');
+$THEME->yuicssmodules = array();
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->csspostprocess = 'theme_ned_clean_process_css';

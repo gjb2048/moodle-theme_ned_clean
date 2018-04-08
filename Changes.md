@@ -1,5 +1,8 @@
 Version Information
 ===================
+Version 3.3.0.1.5
+  1. Fix borders of 1px thickness showing on tables - https://www.screencast.com/t/58lxUamaM.
+
 Version 3.3.0.1.4
   1. Add page module show hide date setting https://www.screencast.com/t/jQPkwhiMZrAv and https://www.screencast.com/t/bd8aymZ9v.
 
