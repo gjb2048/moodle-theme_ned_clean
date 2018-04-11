@@ -1,5 +1,8 @@
 Version Information
 ===================
+Version 3.3.0.1.6
+  1. Add FontAwesome support to activity / resource titles - https://www.screencast.com/t/KLWpYJYz70.
+
 Version 3.3.0.1.5
   1. Fix borders of 1px thickness showing on tables - https://www.screencast.com/t/58lxUamaM.
 
