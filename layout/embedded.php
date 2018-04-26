@@ -15,27 +15,33 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * The embedded layout.
+ *
  * @package    theme_ned_clean
  * @subpackage NED Clean
- * @copyright  2018 NED {@link http://ned.ca}
+ * @copyright  2018 NED {@link http://ned.ca} in respect to changes to the Clean theme.
  * @author     NED {@link http://ned.ca}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @developer  G J Barnard - {@link http://about.me/gjbarnard} and
  *                           {@link http://moodle.org/user/profile.php?id=442195}
  */
 
-defined('MOODLE_INTERNAL') || die();
+echo $OUTPUT->doctype() ?>
+<html <?php echo $OUTPUT->htmlattributes(); ?>>
+<head>
+    <title><?php echo $OUTPUT->page_title(); ?></title>
+    <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
+    <?php echo $OUTPUT->standard_head_html() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-$string['configtitle'] = 'NED Clean';
-$string['pluginname'] = 'NED Clean';
-$string['region-side-pre'] = 'Pre';
-$string['region-side-post'] = 'Post';
-
-// Settings.
-$string['activitiesandresources'] = 'Activities & Resources';
-$string['custom'] = 'Custom';
-$string['forwardbacklinks'] = 'Forward/back links';
-$string['jumptomenu'] = '\'Jump to...\' menu';
-$string['pagedateshowhide'] = 'Show / hide the page module last modified date';
-$string['questionnaireactivitylink'] = 'Questionnaire activity - link directly to Questions page';
-$string['urlresourcelink'] = 'URL Resource - link directly to URL';
+<body <?php echo $OUTPUT->body_attributes(); ?>>
+<?php echo $OUTPUT->standard_top_of_body_html() ?>
+<div id="page">
+    <div id="page-content" class="clearfix">
+        <?php echo $OUTPUT->main_content(); ?>
+    </div>
+</div>
+<?php echo $OUTPUT->standard_end_of_body_html() ?>
+</body>
+</html>

@@ -1,5 +1,9 @@
 Version Information
 ===================
+Version 3.3.0.1.7
+  1. Become a direct child of Bootstrapbase to avoid double inclusion of CSS.
+  2. Added all settings from Clean on new 'Custom' page.
+
 Version 3.3.0.1.6
   1. Add FontAwesome support to activity / resource titles - https://www.screencast.com/t/KLWpYJYz70.
 

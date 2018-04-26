@@ -26,10 +26,14 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$THEME->doctype = 'html5';
 $THEME->name = 'ned_clean';
 
-$THEME->parents = array('clean', 'bootstrapbase');
+$THEME->parents = array('bootstrapbase');
+$THEME->sheets = array('custom');
 $THEME->yuicssmodules = array();
+$THEME->enable_dock = true;
+$THEME->editor_sheets = array();
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->csspostprocess = 'theme_ned_clean_process_css';

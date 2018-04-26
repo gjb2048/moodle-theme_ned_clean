@@ -95,3 +95,61 @@ if ($ADMIN->fulltree) {
     $nedcleansettingsar->add($setting);
 }
 $ADMIN->add('theme_ned_clean', $nedcleansettingsar);
+
+// Custom settings.
+$nedcleansettingscustom = new admin_settingpage('theme_ned_clean_custom', get_string('custom', 'theme_ned_clean'));
+// Initialise individual settings only if admin pages require them.
+if ($ADMIN->fulltree) {
+    // Note: Not a mistake to get title and description strings from Clean.
+
+    // Invert Navbar to dark background.
+    $name = 'theme_ned_clean/invert';
+    $title = get_string('invert', 'theme_clean');
+    $description = get_string('invertdesc', 'theme_clean');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $nedcleansettingscustom->add($setting);
+
+    // Logo file setting.
+    $name = 'theme_ned_clean/logo';
+    $title = get_string('logo','theme_clean');
+    $description = get_string('logodesc', 'theme_clean');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $nedcleansettingscustom->add($setting);
+
+    // Small logo file setting.
+    $name = 'theme_ned_clean/smalllogo';
+    $title = get_string('smalllogo', 'theme_clean');
+    $description = get_string('smalllogodesc', 'theme_clean');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'smalllogo');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $nedcleansettingscustom->add($setting);
+
+    // Show site name along with small logo.
+    $name = 'theme_ned_clean/sitename';
+    $title = get_string('sitename', 'theme_clean');
+    $description = get_string('sitenamedesc', 'theme_clean');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, 1);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $nedcleansettingscustom->add($setting);
+
+    // Custom CSS.
+    $name = 'theme_ned_clean/customcss';
+    $title = get_string('customcss', 'theme_clean');
+    $description = get_string('customcssdesc', 'theme_clean');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $nedcleansettingscustom->add($setting);
+
+    // Footnote setting.
+    $name = 'theme_ned_clean/footnote';
+    $title = get_string('footnote', 'theme_clean');
+    $description = get_string('footnotedesc', 'theme_clean');
+    $default = '';
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $nedcleansettingscustom->add($setting);
+}
+$ADMIN->add('theme_ned_clean', $nedcleansettingscustom);
