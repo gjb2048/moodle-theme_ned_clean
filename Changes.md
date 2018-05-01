@@ -1,5 +1,8 @@
 Version Information
 ===================
+Version 3.3.0.1.8
+  1. Make course summary image a link to the course - https://www.screencast.com/t/CSwHWgOoEx3.
+
 Version 3.3.0.1.7
   1. Become a direct child of Bootstrapbase to avoid double inclusion of CSS.
   2. Added all settings from Clean on new 'Custom' page.
