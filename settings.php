@@ -112,7 +112,7 @@ if ($ADMIN->fulltree) {
 
     // Logo file setting.
     $name = 'theme_ned_clean/logo';
-    $title = get_string('logo','theme_clean');
+    $title = get_string('logo', 'theme_clean');
     $description = get_string('logodesc', 'theme_clean');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
     $setting->set_updatedcallback('theme_reset_all_caches');

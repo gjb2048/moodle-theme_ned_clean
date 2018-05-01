@@ -26,6 +26,8 @@
  *                           {@link http://moodle.org/user/profile.php?id=442195}
  */
 
+defined('MOODLE_INTERNAL') || die;
+
 // Get the HTML for the settings bits.
 $html = theme_ned_clean_get_html_for_settings($OUTPUT, $PAGE);
 

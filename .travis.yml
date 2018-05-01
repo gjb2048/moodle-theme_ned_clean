@@ -33,7 +33,7 @@ env:
   - MOODLE_BRANCH=MOODLE_33_STABLE
   - IGNORE_PATHS=amd/build
   # Also ignore generated CSS files.
-  - IGNORE_NAMES=*.txt,m*.css
+  - IGNORE_NAMES=*.txt,m*.css,custom.css
 
 before_install:
 # This disables XDebug which should speed up the build.  One reason to remove this
