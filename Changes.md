@@ -1,5 +1,8 @@
 Version Information
 ===================
+Version 3.3.0.1.9
+  1. Add missing 'choosereadme' string.
+
 Version 3.3.0.1.8
   1. Make course summary image a link to the course - https://www.screencast.com/t/CSwHWgOoEx3.
 

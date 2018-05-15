@@ -30,6 +30,7 @@ $string['configtitle'] = 'NED Clean';
 $string['pluginname'] = 'NED Clean';
 $string['region-side-pre'] = 'Pre';
 $string['region-side-post'] = 'Post';
+$string['choosereadme'] = 'NED Clean.';
 
 // Settings.
 $string['activitiesandresources'] = 'Activities & Resources';
